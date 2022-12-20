@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'maven:3.8.6-openjdk-11-slim' } }
+    agent { docker { image 'python:3.10.7-alpine' } }
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'python --version'
             }
         }
     }
